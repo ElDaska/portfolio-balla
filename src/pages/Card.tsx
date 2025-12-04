@@ -70,7 +70,7 @@ export default function Card() {
         <div className="mt-8 flex flex-col items-center">
           <div className="p-3 bg-white rounded-xl shadow-lg border border-gray-200">
             <QRCode
-              value="https://tonportfolio.com" // Mets ton lien ici
+              value="https://portfolio-balla.vercel.app/" // Mets ton lien ici
               size={120}
               fgColor="#0B0F19"
             />
