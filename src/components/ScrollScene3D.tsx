@@ -82,9 +82,7 @@ function ParticleField({ progress }: { progress: number }) {
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          count={count}
-          array={positions}
-          itemSize={3}
+          args={[positions, 3]}
         />
       </bufferGeometry>
       <pointsMaterial
@@ -128,7 +126,7 @@ function CentralSphere({ progress }: { progress: number }) {
 function OrbitRings({ progress }: { progress: number }) {
   const groupRef = useRef<THREE.Group>(null!);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!groupRef.current) return;
     groupRef.current.rotation.x = progress * Math.PI * 0.3;
   });
