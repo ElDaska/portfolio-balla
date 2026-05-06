@@ -14,12 +14,11 @@ export default function EducationSection() {
             className="p-4 md:p-5 rounded-xl bg-white/5 border border-white/10"
           >
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-lg font-semibold text-blue-400">
+              <h3 className="text-lg font-semibold text-amber-400">
                 {edu.degree}
               </h3>
               <span className="text-sm text-gray-400">{edu.years}</span>
             </div>
-
             <p className="text-sm text-gray-300">{edu.school}</p>
           </div>
         ))}

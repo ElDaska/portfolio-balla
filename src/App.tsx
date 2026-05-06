@@ -15,11 +15,11 @@ function App() {
   return (
     <BrowserRouter>
       {showWelcome && <WelcomeAnimation onComplete={() => setShowWelcome(false)} />}
-      
-      <div className="min-h-screen bg-[#0f172a] text-white">
+
+      <div className="min-h-screen bg-[#0B1120] text-white">
         <Header />
 
-        <main className="pt-6">
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

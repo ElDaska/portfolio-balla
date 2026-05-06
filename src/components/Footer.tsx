@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -42,15 +41,12 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mt-20 border-t border-white/10 bg-gradient-to-b from-[#020617] to-[#0a0f1a]">
-      {/* Section principale */}
+    <footer className="mt-20 border-t border-white/10 bg-gradient-to-b from-[#080E1A] to-[#0B1120]">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-          
-          {/* Colonne 1 : À propos */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center font-bold text-[#0F172A] shadow-lg">
                 B
               </div>
               <div>
@@ -59,37 +55,23 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Spécialisé en contrôle financier, FP&A et automatisation des processus data. 
+              Spécialisé en contrôle financier, FP&A et automatisation des processus data.
               Basé à Fès, disponible en remote international.
             </p>
-            
-            {/* Badges de compétences */}
             <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 text-xs font-semibold bg-blue-500/10 text-blue-400 rounded border border-blue-500/20">
-                Finance
-              </span>
-              <span className="px-2 py-1 text-xs font-semibold bg-purple-500/10 text-purple-400 rounded border border-purple-500/20">
-                Data
-              </span>
-              <span className="px-2 py-1 text-xs font-semibold bg-green-500/10 text-green-400 rounded border border-green-500/20">
-                Automation
-              </span>
+              <span className="px-2 py-1 text-xs font-semibold bg-amber-500/10 text-amber-400 rounded border border-amber-500/20">Finance</span>
+              <span className="px-2 py-1 text-xs font-semibold bg-amber-500/10 text-amber-400 rounded border border-amber-500/20">Data</span>
+              <span className="px-2 py-1 text-xs font-semibold bg-amber-500/10 text-amber-400 rounded border border-amber-500/20">Automation</span>
             </div>
           </div>
 
-          {/* Colonne 2 : Navigation rapide */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
-              Navigation
-            </h4>
+            <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Navigation</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-sm text-gray-400 hover:text-blue-400 transition flex items-center gap-2 group"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-blue-400 transition" />
+                  <Link to={link.path} className="text-sm text-gray-400 hover:text-amber-400 transition flex items-center gap-2 group">
+                    <span className="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-amber-400 transition" />
                     {link.label}
                   </Link>
                 </li>
@@ -97,32 +79,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Colonne 3 : Contact & Réseaux */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
-              Restons connectés
-            </h4>
-            
-            {/* Contact direct */}
+            <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Restons connectés</h4>
             <div className="space-y-3 mb-6">
-              <a
-                href="mailto:diop.ehb@gmail.com"
-                className="text-sm text-gray-400 hover:text-blue-400 transition block"
-              >
+              <a href="mailto:diop.ehb@gmail.com" className="text-sm text-gray-400 hover:text-amber-400 transition block">
                 diop.ehb@gmail.com
               </a>
-              <a
-                href="tel:+212609685667"
-                className="text-sm text-gray-400 hover:text-green-400 transition block"
-              >
+              <a href="tel:+212609685667" className="text-sm text-gray-400 hover:text-green-400 transition block">
                 +212 6 09 68 56 67
               </a>
-              <p className="text-xs text-gray-500">
-                📍 Fès, Maroc
-              </p>
+              <p className="text-xs text-gray-500">Fès, Maroc</p>
             </div>
-
-            {/* Réseaux sociaux */}
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -130,7 +97,7 @@ export default function Footer() {
                   href={social.url}
                   target={social.url.startsWith('http') ? '_blank' : undefined}
                   rel={social.url.startsWith('http') ? 'noreferrer' : undefined}
-                  className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-500/20 hover:border-blue-500/30 transition-all hover:scale-110"
+                  className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-amber-500/20 hover:border-amber-500/30 transition-all hover:scale-110"
                   title={social.name}
                 >
                   {social.icon}
@@ -141,20 +108,17 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Barre de copyright */}
       <div className="border-t border-white/5 bg-black/20">
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-          <p>
-            © {year} El Hadji Balla DIOP. Tous droits réservés.
-          </p>
+          <p>© {year} El Hadji Balla DIOP. Tous droits réservés.</p>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5">
               Construit avec
-              <span className="text-blue-400">React</span>
+              <span className="text-amber-400">React</span>
               <span className="text-gray-600">•</span>
-              <span className="text-blue-500">TypeScript</span>
+              <span className="text-amber-500">TypeScript</span>
               <span className="text-gray-600">•</span>
-              <span className="text-purple-400">Vite</span>
+              <span className="text-amber-400">Vite</span>
             </span>
           </div>
         </div>
